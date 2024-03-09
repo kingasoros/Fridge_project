@@ -1,0 +1,93 @@
+body{
+    background-color: #ffc107;
+}
+
+.butt_1{
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.img_1{
+    margin:5% 25%;
+    width:40%;
+}
+
+.cont{
+    background-image:url("images/rec.png") ;
+    background-size: cover;
+    height: 700px;
+}
+
+.cont_2{
+  margin:5% auto;
+  background-color: rgba(255, 255, 255, 0.528);
+  padding: 5%;
+  border-radius: 5%;
+}
+
+.fw-normal{
+  color: black;
+  margin:8%;
+}
+
+.text-center{
+  background-color: rgba(255, 255, 255, 0.528);
+  border-radius: 5%;
+}
+
+.butt_2{
+  background-color: #4663c4;
+}
+
+.cont_3{
+  margin:5% auto;
+  background-color: rgba(255, 255, 255, 0.528);
+  padding: 5%;
+  border-radius: 5%;
+  width:55%;
+}
+
+a.ca{
+  font-size: 14px;
+  display:inline-block;
+  padding:10px;
+  text-decoration: none;
+  color:#444;
+}
+
+a.ca:hover{
+  text-decoration: underline;
+}
+
+.img_1{
+  background-image: url("images/rec.png");
+}
+
+.card_imgs{
+  width:"100%";
+  height:"225px"; 
+}
+
+.m_img{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-image: url(images/me.jpg);
+  background-size:cover;
+  margin: 0 auto;
+}
+
+.media{
+  text-align: center;
+  align-items: center;
+}
+
+.lead{
+  padding: 0 8%;
+}
+
+.start_img{
+  width: 480px;
+  height: 500px;
+  margin: 5%;
+}
