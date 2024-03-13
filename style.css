@@ -37,6 +37,7 @@ body{
 
 .butt_2{
   background-color: #4663c4;
+  color: white;
 }
 
 .cont_3{
@@ -90,4 +91,92 @@ a.ca:hover{
   width: 480px;
   height: 500px;
   margin: 5%;
+}
+
+.del_com{
+  color: #b3b0b0;
+}
+
+.receipt_body{
+  background-color: rgba(255, 255, 255, 0.528);
+  margin:5%;
+  padding:5%;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.receipt_body h1{
+  margin:5% auto;
+}
+
+.img_2{
+  width:40%;
+}
+
+nav{
+  padding-right:3%;
+}
+
+.profile_img{
+  width:80%;
+  border-radius: 50%;
+}
+
+.profile_things{
+  margin:5% auto;
+}
+
+.datas{
+  border-radius: 3%;
+}
+
+.btn_edit{
+  background-color:#212529;
+  color:#ffc107;
+  border:3px solid #ffc107;
+}
+
+.d-grid{
+  background-color: #444;
+}
+
+.dropdown{
+  margin-left: 1%;
+}
+
+.liked_header{
+  text-align: center;
+}
+
+.checked-ingredients-title {
+  text-align: center;
+  font-family: Dosis-Bold;
+  font-size: 20px;
+  padding-bottom: 3px;
+  margin: 5px;
+  border-bottom: 3px solid #EA854C;
+}
+
+.box{
+  background-color: #dad2ce8e;
+  border-radius:5%;
+  margin:3%;
+  padding:3%;
+}
+
+.box_2{
+  width:20%;
+  height: 50%;
+}
+
+.button.submit {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 120px;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #ffc107;
+  background-color: #212529;
+  border-radius: 14%;
+  color:#ffc107;
 }

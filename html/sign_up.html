@@ -39,8 +39,23 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success butt_1" type="submit">Search</button>
             </form>
-          </div>
+          
+
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" 
+          data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/me.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Kinga</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
+            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
         </div>
+      </div>
+    </div>
       </nav>
       <div class="container">
         <main class="cont_2">
@@ -68,6 +83,16 @@
                     <input type="text" class="form-control" id="username" placeholder="Username" required>
                     <div class="invalid-feedback">
                       Your username is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="phone" class="form-label">Phone</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone" required>
+                    <div class="invalid-feedback">
+                      Your phone is required.
                     </div>
                   </div>
                 </div>

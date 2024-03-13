@@ -39,80 +39,93 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success butt_1" type="submit">Search</button>
             </form>
-          </div>
+          <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" 
+          data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/me.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Kinga</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
+            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
         </div>
+      </div>
+    </div>
       </nav>
       <div class="container">
         <main class="cont_2">
-          <h4 class="mb-3">SIGN UP</h4>
+          <h4 class="mb-3">ADDING RECIPES</h4>
             <form class="needs-validation" novalidate>
               <div class="row g-3">
-                <div class="col-sm-6">
-                  <label for="firstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="col-sm-12">
+                  <label for="foodName" class="form-label">Food name</label>
+                  <input type="text" class="form-control" id="foodName" placeholder="Soup" value="" required>
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
                 </div>
-                <div class="col-sm-6">
-                  <label for="lastName" class="form-label">Last name</label>
+
+                <div class="col-sm-12">
+                  <label for="yourName" class="form-label">Your name</label>
+                  <input type="text" class="form-control" id="yourName" placeholder="Emese" value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                </div>
+          
+                <div class="col-sm-12">
+                  <label for="time" class="form-label">Cook time:</label>
+                  <input type="text" class="form-control" id="time" placeholder="30 Minutes" value="" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <label for="price" class="form-label">Price:</label>
+                  <input type="text" class="form-control" id="price" placeholder="Relative price" value="" required>
+                </div>
+
+                <div class="col-sm-12">
+                  <label for="serv" class="form-label">Serves:</label>
+                  <input type="text" class="form-control" id="serv" placeholder="10 Servings" value="" required>
+                </div>
+
+                <div class="input-group mb-3">
+                  <label for="inputGroupFile02" class="form-label col-sm-12">Upload a picture of the food:</label>
+                  <input type="file" class="form-control" id="inputGroupFile02">
+                </div>
+
+                <div class="input-group mb-3">
+                  <label for="ingredients" class="form-label col-sm-12">Ingredients:</label>
+                  <button class="btn btn-outline-secondary butt_2" type="button" id="button-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                  </svg></button>
+                  <input type="text" class="form-control" id="ingredients" placeholder="Add an ingredients." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+          
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="About the recipes" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Preparation</label>
+                </div>
+
+                <button class="w-100 btn btn-primary btn-lg butt_2" type="submit">Registration</button>
+              </div>
+            </form>
+            <hr>
+            <h4 class="mb-3">DELETING RECIPES</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="lastName" class="form-label">Food Name<span class="del_com">(The exact name of the food to be returned must be entered.)</span></label>
                   <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                     <div class="invalid-feedback">
                       Valid last name is required.
                     </div>
                 </div>
-                <div class="col-12">
-                  <label for="username" class="form-label">Username</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback">
-                      Your username is required.
-                    </div>
-                  </div>
-                </div>
-          
-                <div class="col-12">
-                  <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                      <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                      </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="example.123">
-                      <div class="invalid-feedback">
-                        Please enter an password.
-                      </div>
-                </div>
-          
-                <div class="col-md-6">
-                  <label for="country" class="form-label">Country</label>
-                  <select class="form-select" id="country" required>
-                      <option value="">Choose...</option>
-                      <option>United States</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid country.
-                  </div>
-                </div>
-          
-                <div class="col-md-6">
-                  <label for="state" class="form-label">State</label>
-                  <select class="form-select" id="state" required>
-                    <option value="">Choose...</option>
-                    <option>California</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please provide a valid state.
-                  </div>
-                </div>
-                <hr class="my-4">
-                <button class="w-100 btn btn-primary btn-lg butt_2" type="submit">Registration</button>
-                <a href="sign_in.html" class="ca">Already have an account?</a>
-            </form>
+                <button class="w-100 btn btn-primary btn-lg butt_2" type="submit">Delete</button>
+              </div>
+            </form>  
         </main>
     </body>
 </html>

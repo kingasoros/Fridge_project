@@ -12,36 +12,49 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">HOME</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="html/rec.html">RECIPES</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      SIGN IN
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="html/sign_in.html">SIGN IN</a></li>
-                      <li><a class="dropdown-item" href="html/sign_up.html">REGISTRATION</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="html/adm.html">ADMINISTRATION</a></li>
-                    </ul>
-                  </li>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">HOME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="html/rec.html">RECIPES</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="html/sign_in.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SIGN IN
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="html/sign_in.html">SIGN IN</a></li>
+                  <li><a class="dropdown-item" href="html/sign_up.html">REGISTRATION</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="html/adm.html">ADMINISTRATION</a></li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success butt_1" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success butt_1" type="submit">Search</button>
+            </form>
+          <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" 
+          data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/me.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Kinga</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="html/fridge.html">Fridge</a></li>
+            <li><a class="dropdown-item" href="html/profile.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
           <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light cont">
             <div class="col-md-5 p-lg-5 mx-auto my-5 text-center">
               <h1 class="display-4 fw-normal">RECIPES</h1>
@@ -65,10 +78,10 @@
             </div>
           </div>
 
-          <hr class="featurette-divider">
+          <hr>
 
           <div class="row featurette">
-            <div class="col-md-7">
+            <div class="col-md-6">
               <h2 class="featurette-heading fw-normal lh-1">Would you like to quickly find a recipe based on what's in your fridge?</h2>
               <p class="lead">You are at the right place!</p>
             </div>
@@ -77,10 +90,10 @@
             </div>
           </div>
       
-          <hr class="featurette-divider">
+          <hr>
       
           <div class="row featurette">
-            <div class="col-md-7 order-md-2">
+            <div class="col-md-6 order-md-2">
               <h2 class="featurette-heading fw-normal lh-1">Don't have time to cook all the time, but do you like to save recipes for later?</h2>
               <p class="lead">This is also possible.</p>
             </div>
@@ -89,10 +102,10 @@
             </div>
           </div>
 
-          <hr class="featurette-divider">
+          <hr>
 
           <div class="row featurette">
-            <div class="col-md-7">
+            <div class="col-md-6">
               <h2 class="featurette-heading fw-normal lh-1">Are you full of ideas?</h2>
               <p class="lead">Register and share your recipes with us!</p>
             </div>
