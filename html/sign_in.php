@@ -24,12 +24,12 @@
                 <a class="nav-link active" aria-current="page" href="rec.html">RECIPES</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="sign_in.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="sign_in.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   SIGN IN
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="sign_in.html">SIGN IN</a></li>
-                  <li><a class="dropdown-item" href="sign_up.html">REGISTRATION</a></li>
+                  <li><a class="dropdown-item" href="sign_in.php">SIGN IN</a></li>
+                  <li><a class="dropdown-item" href="sign_up.php">REGISTRATION</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="adm.html">ADMINISTRATION</a></li>
                 </ul>
@@ -48,9 +48,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
-            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="sign_out.php">Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -59,30 +59,29 @@
       <div class="container">
         <main class="cont_3">
           <h4 class="mb-3">SIGN IN</h4>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" novalidate action="login.php" method="post">
               <div class="row g-3">
                 <div class="col-12">
+
+                  <?php if(isset($_GET['error'])) {?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                  <?php } ?>
+
                   <label for="username" class="form-label">Username</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback">
-                      Your username is required.
-                    </div>
+                    <input type="text" name="uname" class="form-control" id="username" placeholder="Username" required>
                   </div>
                 </div>
 
                 <div class="col-12">
                     <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="example.123">
-                        <div class="invalid-feedback">
-                          Please enter an password.
-                        </div>
+                      <input type="password" name="password" class="form-control" id="password" placeholder="example.123">
                   </div>
         
                 <hr class="my-4">
                 <button class="w-100 btn btn-primary btn-lg butt_2" type="submit">Sign in</button>
-                <a href="sign_up.html" class="ca">Create an account.</a>
+                <a href="sign_up.php" class="ca">Create an account.</a>
             </form>
         </main>
     </body>

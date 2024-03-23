@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['user_name']) && isset($_SESSION['id'])){ ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,12 +31,12 @@
                 <a class="nav-link active" aria-current="page" href="rec.html">RECIPES</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="sign_in.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="sign_in.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   SIGN IN
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="sign_in.html">SIGN IN</a></li>
-                  <li><a class="dropdown-item" href="sign_up.html">REGISTRATION</a></li>
+                  <li><a class="dropdown-item" href="sign_in.php">SIGN IN</a></li>
+                  <li><a class="dropdown-item" href="sign_up.php">REGISTRATION</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="adm.html">ADMINISTRATION</a></li>
                 </ul>
@@ -48,9 +54,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
-            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="sign_out.php">Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -68,44 +74,33 @@
                             <div>
                               <h6 class="my-0">User name</h6>
                             </div>
-                            <span class="text-muted">Kinga</span>
+                            <span class="text-muted"><?php echo $_SESSION['uname']?></span>
                           </li>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                           <div>
                             <h6 class="my-0">First name</h6>
                           </div>
-                          <span class="text-muted">Kinga</span>
+                          <span class="text-muted"><?php echo $_SESSION['f_name']?></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                           <div>
                             <h6 class="my-0">Last Name</h6>
                           </div>
-                          <span class="text-muted">Seres</span>
+                          <span class="text-muted"><?php echo $_SESSION['l_name']?></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                           <div>
                             <h6 class="my-0">Phone number</h6>
                           </div>
-                          <span class="text-muted">0659200318</span>
+                          <span class="text-muted"><?php echo $_SESSION['phone_numb']?></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between lh-sm">
                             <div>
                               <h6 class="my-0">Email</h6>
                             </div>
-                            <span class="text-muted">kingasoros@gmail.com</span>
+                            <span class="text-muted"><?php echo $_SESSION['email']?></span>
                           </li>
-                          <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                              <h6 class="my-0">Country</h6>
-                            </div>
-                            <span class="text-muted">Subotica</span>
-                          </li>
-                          <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                              <h6 class="my-0">State</h6>
-                            </div>
-                            <span class="text-muted">Srbija</span>
-                          </li>
+                          
                           <li class="list-group-item ">
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary btn_edit" type="button">Edit</button>
@@ -210,3 +205,9 @@
     
     </body>
 </html>
+
+<?php 
+}else
+    header("Location:index.php");
+    exit();   
+?>

@@ -24,12 +24,12 @@
                 <a class="nav-link active" aria-current="page" href="rec.html">RECIPES</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="sign_in.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="sign_in.php" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   SIGN IN
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="sign_in.html">SIGN IN</a></li>
-                  <li><a class="dropdown-item" href="sign_up.html">REGISTRATION</a></li>
+                  <li><a class="dropdown-item" href="sign_in.php">SIGN IN</a></li>
+                  <li><a class="dropdown-item" href="sign_up.php">REGISTRATION</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="adm.html">ADMINISTRATION</a></li>
                 </ul>
@@ -49,94 +49,106 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="fridge.html">Fridge</a></li>
-            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="sign_out.php">Sign out</a></li>
           </ul>
         </div>
       </div>
     </div>
       </nav>
+
       <div class="container">
         <main class="cont_2">
           <h4 class="mb-3">SIGN UP</h4>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" novalidate action="sign_up_check.php" method="post">
+
+            <?php if(isset($_GET['error'])) {?>
+            <p class="error"><?php echo $_GET['error']; ?></p>
+           <?php } ?>    
+
+           <?php if(isset($_GET['success'])) {?>
+               <p class="success"><?php echo $_GET['success']; ?></p>
+           <?php } ?>
+
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      Valid first name is required.
-                    </div>
+                  <?php if(isset($_GET['f_name'])) {?>
+                  <input type="text"
+                    class="form-control"
+                    name="f_name" 
+                    placeholder="Example"
+                    value=" <?php echo $_GET['f_name'];?>"><br>
+                  <?php }else{ ?> 
+                  <input type="text"
+                    class="form-control"
+                    name="f_name" 
+                    placeholder="Example"><br>
+                  <?php } ?>
                 </div>
+
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                      Valid last name is required.
-                    </div>
+                  <?php if(isset($_GET['l_name'])) {?>
+                  <input type="text"
+                    class="form-control"
+                    name="l_name" 
+                    placeholder="Example"
+                    value=" <?php echo $_GET['l_name'];?>"><br>
+                  <?php }else{ ?> 
+                  <input type="text"
+                    class="form-control"
+                    name="l_name" 
+                    placeholder="Example"><br>
+                  <?php } ?>
                 </div>
+              </div>
+
                 <div class="col-12">
                   <label for="username" class="form-label">Username</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback">
-                      Your username is required.
-                    </div>
+                    <?php if(isset($_GET['uname'])) {?>
+                    <input type="text"
+                    class="form-control"
+                    name="uname" 
+                    placeholder="Example.123"
+                    value=" <?php echo $_GET['uname'];?>"><br>
+                  <?php }else{ ?> 
+                  <input type="text"
+                    class="form-control"
+                    name="name" 
+                    placeholder="Example.123"><br>
+                  <?php } ?>
                   </div>
                 </div>
 
                 <div class="col-12">
                   <label for="phone" class="form-label">Phone</label>
                   <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="phone" placeholder="Phone" required>
-                    <div class="invalid-feedback">
-                      Your phone is required.
-                    </div>
+                    <input type="text" name="phone_numb" class="form-control" id="phone" placeholder="0600000000" required>
                   </div>
                 </div>
           
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                      <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                      </div>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com">
                 </div>
 
                 <div class="col-12">
                   <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="example.123">
-                      <div class="invalid-feedback">
-                        Please enter an password.
-                      </div>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="example.123">
+                </div>
+
+                <div class="col-12">
+                  <label for="re_password" class="form-label">Password</label>
+                    <input type="password" name="re_password" class="form-control" id="re_password" placeholder="example.123">
                 </div>
           
-                <div class="col-md-6">
-                  <label for="country" class="form-label">Country</label>
-                  <select class="form-select" id="country" required>
-                      <option value="">Choose...</option>
-                      <option>United States</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid country.
-                  </div>
-                </div>
-          
-                <div class="col-md-6">
-                  <label for="state" class="form-label">State</label>
-                  <select class="form-select" id="state" required>
-                    <option value="">Choose...</option>
-                    <option>California</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please provide a valid state.
-                  </div>
-                </div>
                 <hr class="my-4">
                 <button class="w-100 btn btn-primary btn-lg butt_2" type="submit">Registration</button>
-                <a href="sign_in.html" class="ca">Already have an account?</a>
+                <a href="sign_in.php" class="ca">Already have an account?</a>
             </form>
         </main>
     </body>

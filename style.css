@@ -306,6 +306,23 @@ font-size: 1.31rem;
 
 } 
 
+.error{
+  color:#820a0a;
+  background: #d82c2c73;
+  padding:1%;
+  border-radius: 5%;
+  width: 94%;
+  margin-left: 3%;
+}
+
+.success{
+  color:#0a3911;
+  background: #1b5c1e73;
+  padding:1%;
+  border-radius: 5%;
+  width: 94%;
+  margin-left: 3%;
+}
 
 @media screen and (max-width: 900px) { 
 .wrapper .carousel { 
